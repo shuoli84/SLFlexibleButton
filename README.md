@@ -18,16 +18,22 @@ Example
     ];
 ```
 
-When specify the button point as negative value, if it is between [-1,0), then it is used as the percentage. if it is less than -1, then it is used as the tail absolute offset, -10 means (self.bounds.size.width - 10) for x;
-
-point(10, -0.1) means with x as 10 and y as (self.bounds.size.height * (-0.1))
-
 The example code create a button like
 
 ```
 *****************
  *             *
 ***************** 
+```
+
+When specify the button point as negative value, if it is between [-1,0), then it is used as the percentage. if it is less than -1, then it is used as the tail absolute offset, -10 means (self.bounds.size.width - 10) for x;
+
+point(10, -0.1) means with x as 10 and y as (self.bounds.size.height * (-0.1))
+
+```
+> 0: absolute point position
+[-1, 0]: percentable position, -0.5 means the half.
+<-1: reverse offset -10 means self.bounds.size.width - 10 for x. height for y
 ```
 
 TODO
