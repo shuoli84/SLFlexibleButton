@@ -33,24 +33,15 @@
 
 #define PV(x,y) [NSValue valueWithCGPoint:CGPointMake((x), (y))]
     button.buttonPoints = @[
-            PV(10, 0),
-            PV(0, -0.5),
-            PV(10, -1),
-            PV(-0.5, -0.8),
-            PV(-1,-1),
-            PV(-1,0)
-    ];
-
-    button.linesWithColor = @[
-            @[
-                @[  PV(10, 0),
-                    PV(0, -0.5),
-                    PV(10, -1),
-                ], [UIColor blackColor], @2
-            ],
+          PV(0,0),
+            PV(10, -0.5),
+            PV(0, -1),
+            PV(-1, -1),
+            PV(-10, -0.5),
+            PV(-1, 0)
     ];
 #undef PV
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
 
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 
@@ -59,7 +50,7 @@
 
     //button.frame = CGRectMake(0, 0, 100, 40);
     CGRect newFrame = button.frame;
-    newFrame.size.height = 190;
+    newFrame.size.height = 40;
     button.frame = newFrame;
 
     [button addTarget:self action:@selector(clicked:) forControlEvents:UIControlEventTouchUpInside];

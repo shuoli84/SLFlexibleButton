@@ -82,19 +82,29 @@
 - (CGPoint)convertPoint:(CGPoint)point {
     CGFloat x = 0;
     if (point.x < 0) {
-                x = -point.x * self.bounds.size.width;
-            }
-            else {
-                x = point.x;
-            }
+        if(point.x >= -1) {
+            x = -point.x * self.bounds.size.width;
+        }
+        else{
+            x = self.bounds.size.width + point.x;
+        }
+    }
+    else {
+        x = point.x;
+    }
 
     CGFloat y = 0;
     if (point.y < 0) {
-                y = -point.y * self.bounds.size.height;
-            }
-            else {
-                y = point.y;
-            }
+        if(point.y >= -1) {
+            y = -point.y * self.bounds.size.height;
+        }
+        else{
+            y = self.bounds.size.height + point.y;
+        }
+    }
+    else {
+        y = point.y;
+    }
 
     CGPoint resultPoint = CGPointMake(x, y);
     return resultPoint;
