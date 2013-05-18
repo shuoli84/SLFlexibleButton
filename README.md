@@ -9,11 +9,11 @@ Example
 ```objc
 #define PV(x,y) [NSValue valueWithCGPoint:CGPointMake((x), (y))]
     button.buttonPoints = @[
-            PV(10, 0),
-            PV(0, -0.5),
-            PV(10, -1),
-            PV(-0.5, -0.8),
-            PV(-1,-1),
+            PV(0, 0),
+            PV(10, -0.5),
+            PV(0, -1),
+            PV(-1, -1),
+            PV(-10,-0.5),
             PV(-1,0)
     ];
 ```
